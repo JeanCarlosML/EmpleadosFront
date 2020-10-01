@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "app-fronted"
+    }
+  },
+  "defaultProject": "app-fronted",
+  "cli": {
+    "analytics": false
+  }
 }

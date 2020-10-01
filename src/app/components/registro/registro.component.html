@@ -1,0 +1,32 @@
+<div class="container">
+  <form class="form pt-2" [formGroup]="form" (ngSubmit)="onSubmit($event)" >
+    <h2>Formulario de registro</h2>
+    <div class="form-row">
+      <div class="form-group col-xl-6">
+        <label for="">Nombres</label>
+        <input type="text" class="form-control" formControlName="nombres"/>
+      </div>
+      <div class="form-group col-xl-6">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" class="form-control" formControlName="apellidos"/>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-xl-4">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" formControlName="email"/>
+      </div>
+      <div class="form-group col-xl-4">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" formControlName="password"/>
+      </div>
+      <div class="form-group col-xl-4">
+        <label for="telefono">Telefono</label>
+        <input type="text" class="form-control" formControlName="telefono"/>
+      </div>
+      <button type="submit" class="btn btn-outline-primary btn-block" [disabled]="!form.valid" >
+        Registrar
+      </button>
+    </div>
+  </form>
+</div>
