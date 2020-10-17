@@ -7,6 +7,7 @@ import { ListaComponent } from './components/lista/lista.component';
 const routes: Routes = [
   { path: '', component: RegistroComponent },
   { path: 'registro', component: RegistroComponent },
+  { path: 'registro/:id', component: RegistroComponent },
   { path: 'lista', component: ListaComponent },
   { path: 'extras', component: AboutComponent },
   { path: '**', redirectTo: 'registro', pathMatch: 'full' },

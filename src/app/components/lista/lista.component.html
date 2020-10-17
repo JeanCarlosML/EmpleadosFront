@@ -7,14 +7,16 @@
     >
       <div class="card-header">Empleado</div>
       <div class="card-body">
-        <h4 class="card-title">{{ empleado.nombres }}</h4>
+        <h4 class="card-title">Nombre: {{ empleado.nombres }}</h4>
         <p class="card-text">
-          {{ empleado.email }}
+          Email: {{ empleado.email }}
         </p>
-        <p class="card-text">{{ empleado.role }}</p>
-        <p class="card-text">{{ empleado.telefono }}</p>
-        <p class="alert alert-primary" *ngIf="empleado.estado" >Esta habilitado</p>
-        <p class="alert alert-danger" *ngIf="!empleado.estado" >Esta deshabilitado</p>
+        <p class="card-text">Rol: {{ empleado.role }}</p>
+        <p class="card-text">Telefono: {{ empleado.telefono }}</p>
+        <p class="alert alert-primary text-center" *ngIf="empleado.estado" >Usuario habilitado</p>
+        <p class="alert alert-danger text-center" *ngIf="!empleado.estado" >Usuario deshabilitado</p>
+        <button class="btn btn-block btn-outline-primary" (click)="editarEmpleado(empleado)">Editar empleado</button>
+        <button class="btn btn-block btn-outline-danger" (click)="deshabilitarEmpleado(empleado)" >Deshabilitar empleado</button>
       </div>
     </div>
   </div>

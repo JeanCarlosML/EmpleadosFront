@@ -1,4 +1,5 @@
 export interface Empleado {
+  _id?: string;
   apellidos: string;
   email: string;
   estado: boolean;

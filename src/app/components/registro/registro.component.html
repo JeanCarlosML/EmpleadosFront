@@ -1,32 +1,42 @@
 <div class="container">
-  <form class="form pt-2" [formGroup]="form" (ngSubmit)="onSubmit($event)" >
-    <h2>Formulario de registro</h2>
-    <div class="form-row">
-      <div class="form-group col-xl-6">
-        <label for="">Nombres</label>
-        <input type="text" class="form-control" formControlName="nombres"/>
+  <div class="row text-center">
+    <form class="form pt-4 col-xl-8 col-sm-12 m-auto" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+      <h2>Formulario de registro</h2>
+      <div class="form-row">
+        <div class="form-group col-xl-12">
+          <label for="">Nombres</label>
+          <input type="text" class="form-control" formControlName="nombres" />
+        </div>
+        <div class="form-group col-xl-12">
+          <label for="apellidos">Apellidos</label>
+          <input type="text" class="form-control" formControlName="apellidos" />
+        </div>
       </div>
-      <div class="form-group col-xl-6">
-        <label for="apellidos">Apellidos</label>
-        <input type="text" class="form-control" formControlName="apellidos"/>
+      <div class="form-row">
+        <div class="form-group col-xl-12">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" formControlName="email" />
+        </div>
+        <div class="form-group col-xl-12">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            formControlName="password"
+          />
+        </div>
+        <div class="form-group col-xl-12">
+          <label for="telefono">Telefono</label>
+          <input type="number" class="form-control" formControlName="telefono" />
+        </div>
+        <button
+          [disabled]="!form.valid"
+          type="submit"
+          class="btn btn-outline-primary btn-block"
+        >
+          Registrar 
+        </button>
       </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-xl-4">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" formControlName="email"/>
-      </div>
-      <div class="form-group col-xl-4">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" formControlName="password"/>
-      </div>
-      <div class="form-group col-xl-4">
-        <label for="telefono">Telefono</label>
-        <input type="text" class="form-control" formControlName="telefono"/>
-      </div>
-      <button type="submit" class="btn btn-outline-primary btn-block" [disabled]="!form.valid" >
-        Registrar
-      </button>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>
